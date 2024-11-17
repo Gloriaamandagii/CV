@@ -1,85 +1,27 @@
 import heroImage from "./images/hero.jpeg";
+import Header from "./components/Header";
 
 const App = () => {
   return (
     <div>
-      <header>
-        <div className="main-container">
-          <div className="nav">
-            <div className="logo">
-              <a href="/">GM</a>
-            </div>
-            <nav>
-              <ul>
-                <li>
-                  <a href="#services">Services</a>
-                </li>
-                <li>
-                  <a href="#portfolio">Portfolio</a>
-                </li>
-                <li>
-                  <a href="#skills">Skills</a>
-                </li>
-                <li>
-                  <a href="#contact">Contact</a>
-                </li>
-                <li>
-                  <a
-                    href="resume.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <button className="btn">Resume</button>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-            <div className="burger">
-              <div className="line-1" />
-              <div className="line-2" />
-              <div className="line-3" />
-            </div>
-          </div>
-          <section id="hero">
-            <div className="hero-left">
-              <h3 className="pre-title">My name is</h3>
-              <h1 className="hero-name">
-                Gloria <span>Mandagi</span>
-              </h1>
-              <p>
-                Creative front-end developer with more than +5 years of
-                experience in enterprise companies and startups. Proficient in
-                Javascript and React. Passionate about UI/UX.
-              </p>
-            </div>
-            <div className="hero-right">
-              <img src={heroImage} alt="Person Standing" />
-            </div>
-          </section>
-        </div>
-      </header>
-
+      <Header />
       <main>
         <section id="services" className="main-container">
-          <h3 className="pre-title">Services</h3>
-          <h1 className="section-title services-title">Specialized In</h1>
+          <h1 className="section-title services-title">Interested In</h1>
           <div className="grid-3">
             <div className="service">
-              <div className="service-icon" />
-              <h4>UI/UX Design</h4>
+              <h4>Web Development</h4>
               <p>Turn your vision into reality on any platform.</p>
             </div>
 
             <div className="service">
-              <div className="service-icon" />
               <h4>Application Development</h4>
               <p>
                 Design, build, and implement applications with documentation.
               </p>
             </div>
             <div className="service">
-              <div className="service-icon" />
-              <h4>Web Development</h4>
+              <h4>Front-End Development</h4>
               <p>Create and maintain your websites with optimal performance.</p>
             </div>
           </div>
@@ -150,21 +92,24 @@ const App = () => {
               </div>
             </div>
             <div className="skills-right">
-              <p>For 5+ years, I have been continuously learning...</p>
+              <p>
+                Selama lebih dari 2 tahun, saya aktif belajar dan mendalami
+                bidang ini dan terus meningkatkan kemampuan saya.
+              </p>
               <div className="skills-list">
                 <ul>
                   <li>React Js</li>
                   <li>Node JS</li>
-                  <li>MongoDB</li>
+                  <li>CSS</li>
                   <li>HTML</li>
-                  <li>Vue JS</li>
+                  <li>Typescript</li>
                 </ul>
                 <ul>
-                  <li>CSS</li>
-                  <li>Typescript</li>
-                  <li>Next JS</li>
-                  <li>GraphQL</li>
-                  <li>Angular JS</li>
+                  <li>Mysql</li>
+                  <li>Unity</li>
+                  <li>Linux Ubuntu</li>
+                  <li>Linux Centos</li>
+                  <li>Blender</li>
                 </ul>
               </div>
             </div>
