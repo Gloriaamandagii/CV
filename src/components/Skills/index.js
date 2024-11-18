@@ -1,7 +1,6 @@
 const Skills = () => {
   return (
     <section id="skills" className="main-container">
-      <h3 className="pre-title">Learning Path</h3>
       <h1 className="section-title">Skills & Education</h1>
       <div className="skills-grid">
         <div className="skills-left">

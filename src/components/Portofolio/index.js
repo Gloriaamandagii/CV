@@ -1,48 +1,38 @@
 const Portofolio = () => {
   return (
     <section id="portofolio" className="main-container">
-      <h3 className="pre-title">My Works</h3>
-      <h1 className="section-title">Featured Portfolios</h1>
+      <h1 className="section-title">Projects</h1>
       <div className="grid-3">
         <div className="portfolio">
           <div className="portfolio-cover">
-            <img src="./images/porto1.jpg" alt="Person Standing" />
+            <img src="./images/porto1.png" alt="Person Standing" />
           </div>
           <div className="portfolio-info">
-            <h4>Agency Website</h4>
-            <p>Lorem ipsum dolor sit...</p>
-            <div className="portfolio-tags">
-              <div>React</div>
-              <div>Tailwind</div>
-            </div>
+            <h4>Unity 3D Game</h4>
+            <p>Roll a Ball</p>
+            <div className="portfolio-tags"></div>
           </div>
         </div>
 
         <div className="portfolio">
           <div className="portfolio-cover">
-            <img src="./images/porto1.jpg" alt="Person Standing" />
+            <img src="./images/porto3.jpeg" alt="Person Standing" />
           </div>
           <div className="portfolio-info">
-            <h4>Landing Page</h4>
-            <p>Lorem ipsum dolor sit...</p>
-            <div className="portfolio-tags">
-              <div>Vue</div>
-              <div>Contentful</div>
-            </div>
+            <h4>Blender 3D</h4>
+            <p>Cyberpunk night city</p>
+            <div className="portfolio-tags"></div>
           </div>
         </div>
 
         <div className="portfolio">
           <div className="portfolio-cover">
-            <img src="./images/porto1.jpg" alt="Person Standing" />
+            <img src="./images/porto2.jpeg" alt="Person Standing" />
           </div>
           <div className="portfolio-info">
-            <h4>Dashboard Admin</h4>
-            <p>Lorem ipsum dolor sit...</p>
-            <div className="portfolio-tags">
-              <div>React</div>
-              <div>Materialize</div>
-            </div>
+            <h4>Visual Studio</h4>
+            <p>Dekstop Application Inventory Alaise</p>
+            <div className="portfolio-tags"></div>
           </div>
         </div>
       </div>

@@ -45,7 +45,7 @@ const Contact = () => {
             </div>
             <div className="contact-item-detail">
               <h4>Location</h4>
-              <p>3424 Layman Avenue, Fayetteville, NC</p>
+              <p>Manado</p>
             </div>
           </div>
 
@@ -63,7 +63,7 @@ const Contact = () => {
             <div className="contact-item-detail">
               <h4>Phone</h4>
               <p>
-                <a href="tel:+123456789">+1 (234) 567-890</a>
+                <a href="tel:+123456789">0895396383827</a>
               </p>
             </div>
           </div>
@@ -82,7 +82,9 @@ const Contact = () => {
             <div className="contact-item-detail">
               <h4>Email</h4>
               <p>
-                <a href="mailto:email@example.com">email@example.com</a>
+                <a href="https://mail.google.com/mail/u/0/?hl=en#inbox">
+                  https://mail.google.com/mail/u/0/?hl=en#inbox
+                </a>
               </p>
             </div>
           </div>
@@ -100,14 +102,14 @@ const Contact = () => {
               </svg>
             </div>
             <div className="contact-item-detail">
-              <h4>LinkedIn</h4>
+              <h4>Instagram</h4>
               <p>
                 <a
-                  href="https://www.linkedin.com/in/username"
+                  href="https://www.instagram.com/gloriaamandagi/profilecard/?igsh=MXdkbDRmbzZuOGcwZw=="
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  linkedin.com/in/username
+                  https://www.instagram.com/gloriaamandagi/profilecard/?igsh=MXdkbDRmbzZuOGcwZw==
                 </a>
               </p>
             </div>
@@ -128,11 +130,11 @@ const Contact = () => {
               <h4>GitHub</h4>
               <p>
                 <a
-                  href="https://github.com/username"
+                  href="https://github.com/Gloriaamandagii"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  github.com/username
+                  https://github.com/Gloriaamandagii
                 </a>
               </p>
             </div>

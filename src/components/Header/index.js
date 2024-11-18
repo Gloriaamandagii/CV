@@ -3,9 +3,6 @@ const Header = () => {
     <header>
       <div className="main-container">
         <div className="nav">
-          <div className="logo">
-            <a href="/">GM</a>
-          </div>
           <nav>
             <ul>
               <li>
@@ -19,11 +16,6 @@ const Header = () => {
               </li>
               <li>
                 <a href="#contact">Contact</a>
-              </li>
-              <li>
-                <a href="resume.pdf" target="_blank" rel="noopener noreferrer">
-                  <button className="btn">Resume</button>
-                </a>
               </li>
             </ul>
           </nav>

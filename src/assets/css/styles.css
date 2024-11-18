@@ -38,7 +38,7 @@ a {
 }
 
 .main-container {
-  width: 1200px;
+  width: 1519px;
   margin: auto;
 }
 
@@ -107,39 +107,40 @@ a {
   gap: 3rem;
 }
 
+/* Ensure the nav container takes full width */
 .nav {
   display: flex;
-  justify-content: space-between;
-  padding: 2rem 0;
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Center the items vertically (if needed) */
+  width: 100%; /* Make sure the container takes up the full width */
+  background-color: #c99256;
+  height: 80px;
 }
 
+/* Styling for the unordered list to center the items */
 .nav ul {
-  list-style: none;
   display: flex;
-  gap: 3rem;
+  justify-content: center; /* Center the navigation items */
+  list-style-type: none; /* Remove default list styling */
+  margin: 0;
+  padding: 0;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  font-weight: 700;
-  font-size: 2.2rem;
-  color: #4e4a41;
+/* Style for each list item */
+.nav ul li {
+  margin: 0 15px; /* Add spacing between menu items */
 }
 
-nav ul li {
-  display: flex;
-  align-items: center;
+/* Style for the anchor tags */
+.nav ul li a {
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Set text color */
+  font-size: 25px; /* Adjust font size */
 }
 
-nav ul li a {
-  color: #4e4a41;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #c99256; /* Creamy brown hover */
+/* Optional: Style for hover effect */
+.nav ul li a:hover {
+  color: #ffffff; /* Change color on hover */
 }
 
 /* Hero Section */
@@ -162,7 +163,7 @@ nav ul li a:hover {
 }
 
 .hero-right img {
-  width: 90%;
+  width: 80%;
   border-radius: 12px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for image */
   margin-left: 100px; /* Menambahkan margin kiri untuk menggeser gambar ke kanan */
@@ -235,6 +236,24 @@ nav ul li a:hover {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Tambahkan ini ke file CSS Anda */
+.pre-title {
+  font-size: 16px; /* Ukuran teks kecil */
+  font-weight: 600; /* Tebal */
+  text-transform: uppercase; /* Huruf kapital semua */
+  color: #777; /* Warna abu-abu */
+  margin-bottom: 10px; /* Jarak bawah */
+  text-align: center; /* Rata tengah */
+}
+
+.section-title {
+  font-size: 32px; /* Ukuran besar */
+  font-weight: 700; /* Tebal ekstra */
+  margin-bottom: 30px; /* Jarak bawah */
+  color: #333; /* Warna teks */
+  text-align: center; /* Rata tengah */
+}
+
 .portfolio:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -288,66 +307,111 @@ nav ul li a:hover {
   color: #7f7f7f; /* Soft brown */
 }
 
-/* Skills & Education */
+/* Section Skills */
 #skills {
   padding: 6rem 0;
-  background: #fbfbfb;
+  background: linear-gradient(135deg, #fafafa, #f5f1e6);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #4e4a41;
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.section-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: #c99256;
+  display: block;
+  margin: 1rem auto 0;
+  border-radius: 2px;
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
 }
 
-/* Education Section */
-#education {
-  padding: 4rem 0; /* Reduced padding for more compact design */
-  background-color: #f7f7f7;
-}
-
-.education {
-  position: relative;
-  padding: 1.5rem 2rem 1.5rem 3.5rem;
-  margin-bottom: 1.5rem; /* Reduced margin for tighter spacing */
+.skills-left,
+.skills-right {
   background: #ffffff;
+  padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid #c99256;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.education:hover {
-  transform: translateX(10px);
+.skills-left:hover,
+.skills-right:hover {
+  transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
-.education::before {
-  content: "";
-  position: absolute;
-  left: -12px;
-  top: 20px;
-  width: 20px;
-  height: 20px;
-  background-color: #c99256;
-  border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
+.education {
+  margin-bottom: 2rem; /* Menambahkan lebih banyak jarak antar elemen */
+  border-left: 4px solid #c99256;
+  padding-left: 1.5rem;
+  transition: background 0.3s ease, transform 0.3s ease; /* Menambahkan efek transisi */
+  cursor: pointer; /* Menambahkan ikon kursor agar terlihat interaktif */
+}
+
+.education:hover {
+  background: #f5f1e8; /* Mengubah background menjadi cream saat hover */
+  transform: translateY(-3px); /* Efek naik sedikit saat hover */
+  border-left-color: #a67b50; /* Sedikit mempercantik garis kiri saat hover */
+}
+
+.education:active {
+  background: #e8dfd1; /* Warna lebih gelap saat elemen ditekan */
+  transform: translateY(0); /* Efek menekan */
 }
 
 .education-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #4e4a41; /* Dark brown */
-  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #4e4a41;
+  margin-top: 2.5rem;
 }
 
-.education-info {
-  color: #7f7f7f; /* Soft brown */
+.education-years {
+  font-size: 1rem;
+  color: #7f7f7f;
+  margin-top: 2.5rem;
+  height: 20px;
 }
 
-.education:hover::before {
-  background-color: #4e4a41; /* Dark brown */
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.skills-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list li {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin-top: 2.2rem;
+}
+
+.skills-list li:hover {
+  background: #c99256;
+  color: #ffffff;
+  transform: translateY(-3px);
 }
 
 /* Footer Styles */
