@@ -33,8 +33,8 @@ const Portofolio = () => {
             <img src={`data:image/jpeg;base64, ${portofolio.foto2}`} />
           </div>
           <div className="portfolio-info">
-            <h4>{portofolio.porto2title}</h4>
-            <p>{portofolio.porto2subtitle}</p>
+            <h4>{portofolio.porto3title}</h4>
+            <p>{portofolio.porto3subtitle}</p>
             <div className="portfolio-tags"></div>
           </div>
         </div>
@@ -45,7 +45,7 @@ const Portofolio = () => {
           </div>
           <div className="portfolio-info">
             <h4>{portofolio.porto1title}</h4>
-            <p>{portofolio.porto3subtitle}</p>
+            <p>{portofolio.porto2subtitle}</p>
             <div className="portfolio-tags"></div>
           </div>
         </div>
