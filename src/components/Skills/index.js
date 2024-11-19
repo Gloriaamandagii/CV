@@ -1,39 +1,50 @@
+import { getDatabase, ref, onValue } from "firebase/database";
+import { useEffect, useState } from "react";
+
 const Skills = () => {
+  const [skills, setSkills] = useState({});
+
+  useEffect(() => {
+    const db = getDatabase();
+    const skillsRef = ref(db, "skills");
+    onValue(skillsRef, (snapshot) => {
+      const data = snapshot.val();
+      setSkills(data);
+    });
+  }, []);
+
   return (
     <section id="skills" className="main-container">
-      <h1 className="section-title">Skills & Education</h1>
+      <h1 className="section-title">{skills.title}</h1>
       <div className="skills-grid">
         <div className="skills-left">
           <div className="education">
-            <h4 className="education-title">Klabat University</h4>
-            <h4 className="education-years">2022-Now</h4>
-            <h4 className="education-title">SMA Negeri 1 Tomohon</h4>
-            <h4 className="education-years">2019-2021</h4>
-            <h4 className="education-title">SMP Negeri 1 Tomohon</h4>
-            <h4 className="education-years">2017-2020</h4>
-            <h4 className="education-title">SD Gmim 4 Tomohon</h4>
-            <h4 className="education-years">2010-2016</h4>
+            <h4 className="education-title">{skills.edutitle1}</h4>
+            <h4 className="education-years">{skills.eduyears1}</h4>
+            <h4 className="education-title">{skills.edutitle2}</h4>
+            <h4 className="education-years">{skills.eduyears2}</h4>
+            <h4 className="education-title">{skills.edutitle3}</h4>
+            <h4 className="education-years">{skills.eduyears3}</h4>
+            <h4 className="education-title">{skills.edutitle4}</h4>
+            <h4 className="education-years">{skills.eduyears4}</h4>
           </div>
         </div>
         <div className="skills-right">
-          <p>
-            Selama lebih dari 2 tahun, saya aktif belajar dan mendalami bidang
-            ini dan terus meningkatkan kemampuan saya.
-          </p>
+          <p>{skills.subtitle}</p>
           <div className="skills-list">
             <ul>
-              <li>React Js</li>
-              <li>Node JS</li>
-              <li>CSS</li>
-              <li>HTML</li>
-              <li>Typescript</li>
+              <li>{skills.list1}</li>
+              <li>{skills.list2}</li>
+              <li>{skills.list3}</li>
+              <li>{skills.list4}</li>
+              <li>{skills.list5}</li>
             </ul>
             <ul>
-              <li>Mysql</li>
-              <li>Unity</li>
-              <li>Linux Ubuntu</li>
-              <li>Linux Centos</li>
-              <li>Blender</li>
+              <li>{skills.list6}</li>
+              <li>{skills.list7}</li>
+              <li>{skills.list8}</li>
+              <li>{skills.list9}</li>
+              <li>{skills.list10}</li>
             </ul>
           </div>
         </div>
