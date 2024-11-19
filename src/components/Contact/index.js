@@ -74,7 +74,7 @@ const Contact = () => {
                 <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm-1 17v-6h2v6h-2zm0-8V7h2v3h-2z" />
               </svg>
             </div>
-            <div className="contact-item-detail">
+            <div className="contact-item-detail"> 
               <h4>{contact.item3}</h4>
               <p>
                 <a href="tel:+123456789">{contact.number}</a>
