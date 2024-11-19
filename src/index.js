@@ -5,6 +5,7 @@ import "./assets/css/styles.css";
 import "./assets/css/responsive.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import "./config/firebase";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
