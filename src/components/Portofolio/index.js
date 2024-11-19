@@ -1,15 +1,29 @@
+import { getDatabase, ref, onValue } from "firebase/database";
+import { useEffect, useState } from "react";
+
 const Portofolio = () => {
+  const [portofolio, setPortofolio] = useState({});
+
+  useEffect(() => {
+    const db = getDatabase();
+    const portofolioRef = ref(db, "portofolio");
+    onValue(portofolioRef, (snapshot) => {
+      const data = snapshot.val();
+      setPortofolio(data);
+    });
+  }, []);
+
   return (
     <section id="portofolio" className="main-container">
-      <h1 className="section-title">Projects</h1>
+      <h1 className="section-title">{portofolio.title}</h1>
       <div className="grid-3">
         <div className="portfolio">
           <div className="portfolio-cover">
             <img src="./images/porto1.png" alt="Person Standing" />
           </div>
           <div className="portfolio-info">
-            <h4>Unity 3D Game</h4>
-            <p>Roll a Ball</p>
+            <h4>{portofolio.porto1title}</h4>
+            <p>{portofolio.porto1subtitle}</p>
             <div className="portfolio-tags"></div>
           </div>
         </div>
@@ -19,8 +33,8 @@ const Portofolio = () => {
             <img src="./images/porto3.jpeg" alt="Person Standing" />
           </div>
           <div className="portfolio-info">
-            <h4>Blender 3D</h4>
-            <p>Cyberpunk night city</p>
+            <h4>{portofolio.porto2title}</h4>
+            <p>{portofolio.porto2subtitle}</p>
             <div className="portfolio-tags"></div>
           </div>
         </div>
@@ -30,8 +44,8 @@ const Portofolio = () => {
             <img src="./images/porto2.jpeg" alt="Person Standing" />
           </div>
           <div className="portfolio-info">
-            <h4>Visual Studio</h4>
-            <p>Dekstop Application Inventory Alaise</p>
+            <h4>{portofolio.porto1title}</h4>
+            <p>{portofolio.porto3subtitle}</p>
             <div className="portfolio-tags"></div>
           </div>
         </div>
