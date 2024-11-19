@@ -19,7 +19,7 @@ const Portofolio = () => {
       <div className="grid-3">
         <div className="portfolio">
           <div className="portfolio-cover">
-            <img src="./images/porto1.png" alt="Person Standing" />
+            <img src={`data:image/jpeg;base64, ${portofolio.foto1}`} />
           </div>
           <div className="portfolio-info">
             <h4>{portofolio.porto1title}</h4>
@@ -30,7 +30,7 @@ const Portofolio = () => {
 
         <div className="portfolio">
           <div className="portfolio-cover">
-            <img src="./images/porto3.jpeg" alt="Person Standing" />
+            <img src={`data:image/jpeg;base64, ${portofolio.foto2}`} />
           </div>
           <div className="portfolio-info">
             <h4>{portofolio.porto2title}</h4>
@@ -41,7 +41,7 @@ const Portofolio = () => {
 
         <div className="portfolio">
           <div className="portfolio-cover">
-            <img src="./images/porto2.jpeg" alt="Person Standing" />
+            <img src={`data:image/jpeg;base64, ${portofolio.foto3}`} />
           </div>
           <div className="portfolio-info">
             <h4>{portofolio.porto1title}</h4>

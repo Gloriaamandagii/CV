@@ -45,7 +45,7 @@ const Header = () => {
             <p>{header.subtittle}</p>
           </div>
           <div className="hero-right">
-            <img src="./images/hero.jpeg" alt="Person Standing" />
+            <img src={`data:image/jpeg;base64, ${header.profil}`} />
           </div>
         </section>
       </div>
