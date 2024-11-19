@@ -1,9 +1,23 @@
+import { getDatabase, ref, onValue } from "firebase/database";
+import { useEffect, useState } from "react";
+
 const Contact = () => {
+  const [contact, setContact] = useState({});
+
+  useEffect(() => {
+    const db = getDatabase();
+    const contactRef = ref(db, "contact");
+    onValue(contactRef, (snapshot) => {
+      const data = snapshot.val();
+      setContact(data);
+    });
+  }, []);
+
   return (
     <footer id="contact" className="main-container">
       <div className="contact">
         <div className="contact-left">
-          <h3 className="pre-title">Contact Me</h3>
+          <h3 className="pre-title">{contact.pretitle}</h3>
           <form
             className="contact-form"
             action="https://formspree.io/f/xzbllrrq"
@@ -24,13 +38,13 @@ const Contact = () => {
               required
             />
             <button className="btn-submit" type="submit">
-              Send Message
+              {contact.submit}
             </button>
           </form>
         </div>
 
         <div className="contact-right">
-          <h3 className="pre-title">Get In Touch</h3>
+          <h3 className="pre-title">{contact.pretitle2}</h3>
 
           <div className="contact-item">
             <div className="contact-item-icon">
@@ -44,8 +58,8 @@ const Contact = () => {
               </svg>
             </div>
             <div className="contact-item-detail">
-              <h4>Location</h4>
-              <p>Manado</p>
+              <h4>{contact.item1}</h4>
+              <p>{contact.item2}</p>
             </div>
           </div>
 
@@ -61,9 +75,9 @@ const Contact = () => {
               </svg>
             </div>
             <div className="contact-item-detail">
-              <h4>Phone</h4>
+              <h4>{contact.item3}</h4>
               <p>
-                <a href="tel:+123456789">0895396383827</a>
+                <a href="tel:+123456789">{contact.number}</a>
               </p>
             </div>
           </div>
@@ -80,10 +94,10 @@ const Contact = () => {
               </svg>
             </div>
             <div className="contact-item-detail">
-              <h4>Email</h4>
+              <h4>{contact.item4}</h4>
               <p>
                 <a href="https://mail.google.com/mail/u/0/?hl=en#inbox">
-                  https://mail.google.com/mail/u/0/?hl=en#inbox
+                  {contact.email}
                 </a>
               </p>
             </div>
@@ -102,14 +116,14 @@ const Contact = () => {
               </svg>
             </div>
             <div className="contact-item-detail">
-              <h4>Instagram</h4>
+              <h4>{contact.item5}</h4>
               <p>
                 <a
                   href="https://www.instagram.com/gloriaamandagi/profilecard/?igsh=MXdkbDRmbzZuOGcwZw=="
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  https://www.instagram.com/gloriaamandagi/profilecard/?igsh=MXdkbDRmbzZuOGcwZw==
+                  {contact.instagram}
                 </a>
               </p>
             </div>
@@ -127,14 +141,14 @@ const Contact = () => {
               </svg>
             </div>
             <div className="contact-item-detail">
-              <h4>GitHub</h4>
+              <h4>{contact.item6}</h4>
               <p>
                 <a
                   href="https://github.com/Gloriaamandagii"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  https://github.com/Gloriaamandagii
+                  {contact.github}
                 </a>
               </p>
             </div>

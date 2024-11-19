@@ -1,4 +1,17 @@
+import { getDatabase, ref, onValue } from "firebase/database";
+import { useEffect, useState } from "react";
 const Header = () => {
+  const [header, setHeader] = useState({});
+
+  useEffect(() => {
+    const db = getDatabase();
+    const headerRef = ref(db, "header");
+    onValue(headerRef, (snapshot) => {
+      const data = snapshot.val();
+      setHeader(data);
+    });
+  }, []);
+
   return (
     <header>
       <div className="main-container">
@@ -6,16 +19,16 @@ const Header = () => {
           <nav>
             <ul>
               <li>
-                <a href="#services">Services</a>
+                <a href="#services">{header.nav1}</a>
               </li>
               <li>
-                <a href="#portfolio">Portfolio</a>
+                <a href="#portfolio">{header.nav2}</a>
               </li>
               <li>
-                <a href="#skills">Skills</a>
+                <a href="#skills">{header.nav3}</a>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <a href="#contact">{header.nav4}</a>
               </li>
             </ul>
           </nav>
@@ -27,16 +40,9 @@ const Header = () => {
         </div>
         <section id="hero">
           <div className="hero-left">
-            <h3 className="pre-title">My name is</h3>
-            <h1 className="hero-name">
-              Gloria <span>Mandagi</span>
-            </h1>
-            <p>
-              Saya adalah memiliki minat besar di bidang pengembangan web,
-              aplikasi mobile, dan front-end development. Saya suka belajar
-              mengembangkan keterampilan dalam JavaScript dan React untuk
-              menciptakan aplikasi dan website yang efektif dan berkualitas.
-            </p>
+            <h3 className="pre-title">{header.pretitle}</h3>
+            <h1 className="hero-name">{header.name}</h1>
+            <p>{header.subtittle}</p>
           </div>
           <div className="hero-right">
             <img src="./images/hero.jpeg" alt="Person Standing" />
